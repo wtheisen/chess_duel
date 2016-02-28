@@ -20,8 +20,13 @@ char Piece::getChar(){
 	return repChar;
 }
 
-Null::Null(){
-	setChar(0);
+int Piece::getPlayer(){
+	return player;
+}
+
+Null::Null(int num){
+	setChar(32);
+	setPlayer(num);
 }
 
 Pawn::Pawn(int num){

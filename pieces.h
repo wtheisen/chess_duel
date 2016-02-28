@@ -8,6 +8,7 @@ class Piece{ //abstract base class for chess pieces
 		void setChar( char);
 		void setPlayer( int);
 		char getChar();
+		int getPlayer();
 	private:
 		int player; //0 is caps, 1 is lower-case	
 		char repChar; //p for pawn, etc...
@@ -15,7 +16,7 @@ class Piece{ //abstract base class for chess pieces
 
 class Null: public Piece{
 	public:
-		Null();
+		Null(int); //should always be 2
 	private:
 
 };

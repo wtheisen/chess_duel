@@ -10,10 +10,10 @@ void Board::initPieces(){
 	//initialize pieces
 	Pawn aPawn1(0), aPawn2(0), aPawn3(0), aPawn4(0), aPawn5(0), aPawn6(0), aPawn7(0), aPawn8(0);
 	Pawn bPawn1(1), bPawn2(1), bPawn3(1), bPawn4(1), bPawn5(1), bPawn6(1), bPawn7(1), bPawn8(1);
-	Null Null1, Null2, Null3, Null4, Null5, Null6, Null7, Null8;
-	Null Null9, Null10, Null11, Null12, Null13, Null14, Null15, Null16;
-	Null Null17, Null18, Null19, Null20, Null21, Null22, Null23, Null24; 
-	Null Null25, Null26, Null27, Null28, Null29, Null30, Null31, Null32;	
+	Null Null1(2), Null2(2), Null3(2), Null4(2), Null5(2), Null6(2), Null7(2), Null8(2);
+	Null Null9(2), Null10(2), Null11(2), Null12(2), Null13(2), Null14(2), Null15(2), Null16(2);
+	Null Null17(2), Null18(2), Null19(2), Null20(2), Null21(2), Null22(2), Null23(2), Null24(2); 
+	Null Null25(2), Null26(2), Null27(2), Null28(2), Null29(2), Null30(2), Null31(2), Null32(2);	
 	King aKing(0), bKing(1);
 	Queen aQueen(0), bQueen(1);
 	Bishop aBishop1(0), aBishop2(0), bBishop1(1), bBishop2(1);
@@ -83,10 +83,21 @@ void Board::initPieces(){
 
 
 void Board::display(){
+	cout << "    a  b  c  d  e  f  g  h" << endl << endl;
 	for( int i = 0; i < dim; i++){
+		cout << i << "  ";
 		for( int j = 0; j < dim; j++){
-			cout << chessBoard[i].at(j).getChar();
+			cout << "|";
+			if( chessBoard[j].at(i).getPlayer() == 0){
+				cout << chessBoard[j].at(i).getChar();
+			}else if( chessBoard[j].at(i).getPlayer() == 1){
+				cout << (char)(chessBoard[j].at(i).getChar()-32);
+			}else{
+				cout << chessBoard[j].at(i).getChar();
+			}
+			cout << "|";
 		}
 		cout << endl;
 	}
+	cout << endl << endl;
 }

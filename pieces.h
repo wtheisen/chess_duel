@@ -6,6 +6,7 @@ class Piece{ //abstract base class for chess pieces
 		Piece();
 		virtual void move() const;
 		void setChar( char);
+		char getChar();
 	private:
 		int player; //0 is caps, 1 is lower-case	
 		char repChar; //p for pawn, etc...

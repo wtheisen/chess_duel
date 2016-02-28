@@ -6,6 +6,6 @@
 
 int main(){
 	Board gameBoard; //instantiate board object
-	
+	gameBoard.display();	
 	return 0;
 }

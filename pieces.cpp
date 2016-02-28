@@ -12,6 +12,10 @@ void Piece::setChar( char c){
 	repChar = c;
 }
 
+char Piece::getChar(){
+	return repChar;
+}
+
 Null::Null(){
 	setChar(0);
 }

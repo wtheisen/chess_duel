@@ -41,3 +41,11 @@ void Board::initPieces(){
 	chessBoard[0][2] = new Bishop; chessBoard[0][5] = new Bishop;
 	chessBoard[7][2] = new Bishop; chessBoard[7][5] = new Bishop;
 }
+
+void Board::display(){
+	for( int i = 0; i < dim; i++){
+		for( int j = 0; j < dim; j++){
+			std::cout << chessBoard[i][j] -> getChar();
+		}
+	}
+}

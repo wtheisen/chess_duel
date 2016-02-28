@@ -4,7 +4,7 @@
 class Pieces{ //abstract base class for chess pieces
 	public:
 		Pieces();
-		//virtual void place() const =0;
+		virtual void place() const =0;
 	private:	
 
 };

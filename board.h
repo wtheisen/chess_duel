@@ -2,17 +2,18 @@
 #define _BOARD_H_INCLUDED_
 
 #include <iostream>
+#include <vector>
 #include "pieces.h"
+using namespace std;
 
 class Board{
 	public:
 		Board(); //default constructor for board
-		~Board(); //deconstructor for board
 		void initPieces();
 		void display();
 	private:
 		int dim;
-		Piece ***  chessBoard;
+		vector< vector < Piece> > chessBoard; 
 };
 
 #endif

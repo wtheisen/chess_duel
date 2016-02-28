@@ -24,11 +24,6 @@ Pawn::Pawn(){
 	setChar('p');
 }
 
-
-Bishop::Bishop(){
-	setChar('b');
-}
-
 Knight::Knight(){
 	setChar('n');
 }
@@ -37,13 +32,20 @@ Castle::Castle(){
 	setChar('c');
 }
 
-Queen::Queen(){
-	setChar('q');
+Bishop::Bishop(){
+	setChar('b');
 }
 
 King::King(){
 	setChar('k');
 }
+
+Queen::Queen(){
+	setChar('q');
+}
+
+
+
 
 
 

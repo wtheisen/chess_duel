@@ -6,6 +6,7 @@ class Piece{ //abstract base class for chess pieces
 		Piece();
 		virtual void move() const;
 		void setChar( char);
+		void setPlayer( int);
 		char getChar();
 	private:
 		int player; //0 is caps, 1 is lower-case	
@@ -21,7 +22,7 @@ class Null: public Piece{
 
 class Pawn: public Piece{
 	public:
-		Pawn();
+		Pawn( int );
 		void move();
 	private:
 
@@ -29,35 +30,35 @@ class Pawn: public Piece{
 
 class Bishop: public Piece{
 	public:
-		Bishop();
+		Bishop(int);
 		void move();
 	private:
 };
 
 class Knight: public Piece{
 	public:
-		Knight();
+		Knight(int);
 		void move();
 	private:
 };
 
 class Castle: public Piece{
 	public:
-		Castle();
+		Castle(int);
 		void move();
 	private:
 };
 
 class Queen: public Piece{
 	public:
-		Queen();
+		Queen(int);
 		void move();
 	private:
 };
 
 class King: public Piece{
 	public:
-		King();
+		King(int);
 		void move();
 	private:
 

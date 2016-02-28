@@ -8,17 +8,17 @@ Board::Board(){
 
 void Board::initPieces(){
 	//initialize pieces
-	Pawn aPawn1, aPawn2, aPawn3, aPawn4, aPawn5, aPawn6, aPawn7, aPawn8;
-	Pawn bPawn1, bPawn2, bPawn3, bPawn4, bPawn5, bPawn6, bPawn7, bPawn8;
+	Pawn aPawn1(0), aPawn2(0), aPawn3(0), aPawn4(0), aPawn5(0), aPawn6(0), aPawn7(0), aPawn8(0);
+	Pawn bPawn1(1), bPawn2(1), bPawn3(1), bPawn4(1), bPawn5(1), bPawn6(1), bPawn7(1), bPawn8(1);
 	Null Null1, Null2, Null3, Null4, Null5, Null6, Null7, Null8;
 	Null Null9, Null10, Null11, Null12, Null13, Null14, Null15, Null16;
 	Null Null17, Null18, Null19, Null20, Null21, Null22, Null23, Null24; 
 	Null Null25, Null26, Null27, Null28, Null29, Null30, Null31, Null32;	
-	King aKing, bKing;
-	Queen aQueen, bQueen;
-	Bishop aBishop1, aBishop2, bBishop1, bBishop2;
-	Castle aCastle1, aCastle2, bCastle1, bCastle2;
-	Knight aKnight1, aKnight2, bKnight1, bKnight2;
+	King aKing(0), bKing(1);
+	Queen aQueen(0), bQueen(1);
+	Bishop aBishop1(0), aBishop2(0), bBishop1(1), bBishop2(1);
+	Castle aCastle1(0), aCastle2(0), bCastle1(1), bCastle2(1);
+	Knight aKnight1(0), aKnight2(0), bKnight1(1), bKnight2(1);
 
 	vector<Piece> tempVector;
 	tempVector.push_back(aCastle1); tempVector.push_back(aPawn1);

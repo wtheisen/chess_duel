@@ -12,6 +12,10 @@ void Piece::setChar( char c){
 	repChar = c;
 }
 
+void Piece::setPlayer( int num){
+	player = num;	
+}
+
 char Piece::getChar(){
 	return repChar;
 }
@@ -20,28 +24,34 @@ Null::Null(){
 	setChar(0);
 }
 
-Pawn::Pawn(){
+Pawn::Pawn(int num){
 	setChar('p');
+	setPlayer(num);
 }
 
-Knight::Knight(){
+Knight::Knight(int num){
 	setChar('n');
+	setPlayer(num);
 }
 
-Castle::Castle(){
+Castle::Castle(int num){
 	setChar('c');
+	setPlayer(num);
 }
 
-Bishop::Bishop(){
+Bishop::Bishop(int num){
 	setChar('b');
+	setPlayer(num);
 }
 
-King::King(){
+King::King(int num){
 	setChar('k');
+	setPlayer(num);
 }
 
-Queen::Queen(){
+Queen::Queen(int num){
 	setChar('q');
+	setPlayer(num);
 }
 
 

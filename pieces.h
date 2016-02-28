@@ -3,7 +3,8 @@
 
 class Pieces{ //abstract base class for chess pieces
 	public:
-		virtual void place() const =0;
+		Pieces();
+		//virtual void place() const =0;
 	private:	
 
 };

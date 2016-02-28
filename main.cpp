@@ -1,7 +1,8 @@
 //chess_dual
 //main.cpp
-#include "board.h"
+
 #include "pieces.h"
+#include "board.h"
 
 int main(){
 	Board gameBoard; //instantiate board object

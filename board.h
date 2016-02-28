@@ -5,7 +5,7 @@ class Board{
 	public:
 		Board(); //default constructor for board
 	private:
-		int chessBoard [8][8];
+		Pieces chessBoard [8][8];
 		int dim;
 };
 

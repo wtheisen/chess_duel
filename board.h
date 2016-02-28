@@ -5,8 +5,11 @@
 class Board{
 	public:
 		Board(); //default constructor for board
+		~Board(); //deconstructor for board
+		void initPieces();
 	private:
 		int dim;
+		Piece ***  chessBoard;
 };
 
 #endif

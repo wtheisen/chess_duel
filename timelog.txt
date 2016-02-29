@@ -6,3 +6,8 @@
 2/22
    Billy and Danny: 1.5 hours planning AI
 
+2/28:
+	Alex: 3 Hours implementing board and piece class
+	
+2/29:
+	Alex: 2 hours implemeting game class.

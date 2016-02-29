@@ -101,3 +101,19 @@ void Board::display(){
 	}
 	cout << endl << endl;
 }
+
+void Board::writeToFile(){
+	ofstream gamestate; 
+	gamestate.open("gamestate");
+	for( int i = 0; i < dim; i++){
+		for( int j = 0; j < dim; j++){
+			if( chessBoard[j].at(i).getPlayer() == 1){
+				gamestate << (char)(chessBoard[j].at(i).getChar() - 32);
+			}else{
+				gamestate << chessBoard[j].at(i).getChar();
+			}	
+		}
+		gamestate << "\n";
+	}
+	gamestate.close();
+}

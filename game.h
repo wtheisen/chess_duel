@@ -21,6 +21,7 @@ class Game{
 		int getToX();
 		int getToY();
 		void play();
+		void makeMove( int, int, int, int);
 	private:
 		int moveFromX, moveFromY;
 		int moveToX, moveToY;

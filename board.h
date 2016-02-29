@@ -5,6 +5,7 @@
 #include <iostream> //needed for cout, cin, endl
 #include <vector> //needed for stl::vector
 #include <string>
+#include <fstream>
 //headers
 #include "pieces.h"
 #include "game.h"
@@ -16,6 +17,7 @@ class Board{
 		Board(); //default constructor for board
 		void initPieces();
 		void display();
+		void writeToFile();
 	private:
 		int dim;
 		vector< vector < Piece> > chessBoard; 

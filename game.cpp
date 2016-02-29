@@ -122,3 +122,9 @@ int Game::getToY(){
 void Game::play(){
 	getCoordinates();
 }
+
+void Game::makeMove( int fromX, int fromY, int toX, int toY){
+	//if( chessBoard[fromY].at(fromX).getPlayer() == 2) {
+		//cout << "No piece there!" << endl;
+	//}
+}

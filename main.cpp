@@ -9,7 +9,8 @@ using namespace std;
 int main(){
 	Board gameBoard; //instantiate board object	
 	gameBoard.display();
+	gameBoard.writeToFile();
 	Game chessGame;
-	chessGame.play();
+
 	return 0;
 }

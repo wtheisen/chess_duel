@@ -11,3 +11,5 @@
 	
 2/29:
 	Alex: 2 hours implemeting game class.
+	
+	Michael: 2 hours 2PacMemes

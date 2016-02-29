@@ -85,7 +85,7 @@ void Board::initPieces(){
 void Board::display(){
 	cout << "    a  b  c  d  e  f  g  h" << endl << endl;
 	for( int i = 0; i < dim; i++){
-		cout << i << "  ";
+		cout << 8 - i << "  ";
 		for( int j = 0; j < dim; j++){
 			cout << "|";
 			if( chessBoard[j].at(i).getPlayer() == 0){

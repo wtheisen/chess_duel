@@ -13,6 +13,8 @@
 using namespace std;
 
 class Board{
+
+        friend class AI;
 	public:
 		Board(); //default constructor for board
 		void initPieces();

@@ -16,6 +16,7 @@ int main(){
         AI AI_1;
         AI_1.findMoves(gameBoard);
         //AI_1.dispValidMoves();
+        AI_1.makeObviousMove(gameBoard);
 
 	return 0;
 }

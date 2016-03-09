@@ -17,3 +17,6 @@
 3/8:
    Danny and Billy - .5 hours talking about AI
    Danny - 1.75 hours starting AI code
+
+3/9:
+   Danny - .7 hours continuing on AI code

@@ -3,31 +3,99 @@
 
 using namespace std;
 
-void AI::overallAlgorithm()
+void AI::overallAlgorithm(Board B)
 {
    //if(kingInCheck)
    //{
       getOutOfCheck();
    //}
    
-   if(!makeObviousMove())
+   if(!makeObviousMove(B))
    {
       //makeMove();
    }
 }
 
 void AI::getOutOfCheck()
-{
-   //if king is in check
-   //move him
+{  
+   //if(kingInCheck())
+   {
+
+      for(int col=0; col<8; col++)
+      {
+         for(int row=0; row<8; row++)
+         {
+            //if(isValidMove(bKing, row, col)
+            {
+               //move king
+            }
+         }
+      }
+
+   }
+
 
 }
 
-int AI::makeObviousMove() // returns 1 if move is made
+int AI::makeObviousMove(Board B) // returns 1 if move is made
 {
-   //if queen can be taken, protect it
-   //else if can take queen, take it
+  
+   int AIQueenRow, AIQueenCol, PlayerQueenRow, PlayerQueenCol; // track position of both queens
+   
+   // find queen and store the space where it is
+   for(int col=0; col<8; col++)
+   {
+      for(int row=0; row<8; row++)
+      {
+         Piece P = B.chessBoard[col][row];
 
+         if(P.getChar() == 'q')
+         {
+            if(P.getPlayer() == 1) // this is the AI queen
+            {
+               AIQueenRow = row;
+               AIQueenCol = col;
+               cout << "Found AI queen in row " << AIQueenRow+1 << " and column " << AIQueenCol+1 << endl;
+            }
+            else if(P.getPlayer() == 0) // this is the player Queen
+            {
+               PlayerQueenRow = row;
+               PlayerQueenCol = col;
+               cout << "Found Player queen in row " << PlayerQueenRow+1 << " and column " << PlayerQueenCol+1 << endl;
+            }
+         }
+
+      }
+   }
+
+   // check if our queen is threatened or can capture the opposing queen
+   for(int c=0; c<8; c++)
+   {
+      for(int r=0; r<8; r++)
+      {
+
+         Piece P = B.chessBoard[c][r];
+         if(P.getPlayer() == 1)
+         {
+            //if(isValidMove(P, AIQueenRow, AIQueenCol)) // queen is threatened
+            {
+               //move queen
+               return 1; 
+            }
+         }
+         if(P.getPlayer() == 0)
+         {
+            //if(isValidMove(P, PlayerQueenRow, PlayerQueenCol)) // can take opposing queen
+            {
+               //capture queen
+               return 1;
+            }
+         }
+
+      }
+   }
+
+   return 0;
 }
 
 void AI::findMoves(Board B)

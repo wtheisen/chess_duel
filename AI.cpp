@@ -3,16 +3,22 @@
 
 using namespace std;
 
-void AI::overallAlgorithm(Board B)
+AI::AI(Board B)
+{
+   boardOriginal = B.chessBoard;  
+}
+
+void AI::overallAlgorithm()
 {
    //if(kingInCheck)
    //{
       getOutOfCheck();
    //}
    
-   if(!makeObviousMove(B))
+   if(!makeObviousMove())
    {
-      //makeMove();
+      int movesAhead = 1;
+      makeMove(movesAhead);
    }
 }
 
@@ -37,7 +43,7 @@ void AI::getOutOfCheck()
 
 }
 
-int AI::makeObviousMove(Board B) // returns 1 if move is made
+int AI::makeObviousMove() // returns 1 if move is made
 {
   
    int AIQueenRow, AIQueenCol, PlayerQueenRow, PlayerQueenCol; // track position of both queens
@@ -47,7 +53,7 @@ int AI::makeObviousMove(Board B) // returns 1 if move is made
    {
       for(int row=0; row<8; row++)
       {
-         Piece P = B.chessBoard[col][row];
+         Piece P = boardOriginal[col][row];
 
          if(P.getChar() == 'q')
          {
@@ -74,7 +80,7 @@ int AI::makeObviousMove(Board B) // returns 1 if move is made
       for(int r=0; r<8; r++)
       {
 
-         Piece P = B.chessBoard[c][r];
+         Piece P = boardOriginal[c][r];
          if(P.getPlayer() == 1)
          {
             //if(isValidMove(P, AIQueenRow, AIQueenCol)) // queen is threatened
@@ -141,4 +147,49 @@ void AI::dispValidMoves()
    for(int k=0; k<moveCols.size(); k++)
       cout << moveCols[k] << " ";
 
+}
+
+int AI::makeMove(int movesAhead)
+{
+   if(movesAhead > 4)
+      return 0; 
+
+   cout << "moves ahead: " << movesAhead << endl;
+
+   makeMove(movesAhead+1);
+}
+
+void AI::findNextPiece()
+{
+   currentRow = 0;
+   currentCol = 0; // get rid of these eventually
+
+   int row = currentRow;
+   int col = currentCol;
+   col++;
+
+   while(col < 7)
+   {
+
+      int player = boardOriginal[row][col].getPlayer(); 
+      if(player == 0 | player == 2)
+         col++;
+      else
+         break;
+
+      while(row < 7)
+      {
+
+         player = boardOriginal[row][col].getPlayer(); 
+         row++;
+         if(player == 0 | player == 2)
+            row++;
+         else
+            break;
+
+      }
+   }
+
+   currentPiece = boardOriginal[row][col];
+   cout << "Next Piece: " << currentPiece.getChar();
 }

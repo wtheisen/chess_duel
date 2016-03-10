@@ -13,10 +13,12 @@ int main(){
 	gameBoard.display();
 	gameBoard.writeToFile();
 	Game chessGame;
-        AI AI_1;
-        AI_1.findMoves(gameBoard);
+        AI AI_1(gameBoard);
+        //AI_1.findMoves(gameBoard);
         //AI_1.dispValidMoves();
-        AI_1.makeObviousMove(gameBoard);
+        //AI_1.makeObviousMove();
+        //AI_1.makeMove(1);
+        //AI_1.findNextPiece();
 
 	return 0;
 }

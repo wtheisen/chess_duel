@@ -3,7 +3,6 @@
 Board::Board(){	
 	dim = 8;
 	initPieces();
-	//chessBoard[1].push_back( Pawn )	
 }
 
 void Board::initPieces(){
@@ -77,7 +76,14 @@ void Board::initPieces(){
 	chessBoard.push_back( tempVector);
 	tempVector.clear();
 	
-
+	Null Null33(2), Null34(2), Null35(2), Null36(2), Null37(2), Null38(2), Null39(2), Null40(2);
+	Null Null41(2), Null42(2), Null43(2), Null44(2), Null45(2), Null46(2), Null47(2), Null48(2);
+	Null Null49(2), Null50(2), Null51(2), Null52(2), Null53(2), Null54(2), Null55(2), Null56(2); 
+	Null Null57(2), Null58(2), Null59(2), Null60(2), Null61(2), Null62(2), Null63(2), Null64(2);	
+	Null Null65(2), Null66(2), Null67(2), Null68(2), Null69(2), Null70(2), Null71(2), Null72(2);
+	Null Null73(2), Null74(2), Null75(2), Null76(2), Null77(2), Null78(2), Null79(2), Null90(2);
+	Null Null91(2), Null92(2), Null93(2), Null94(2), Null95(2), Null96(2), Null97(2), Null98(2); 
+	Null Null99(2), Null100(2), Null101(2), Null102(2), Null103(2), Null104(2), Null105(2), Null106(2);	
 }
 
 

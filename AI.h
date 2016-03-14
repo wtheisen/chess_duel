@@ -15,6 +15,9 @@ class AI {
       int makeObviousMove();
       int makeMove(int movesAhead);
       void findNextPiece();
+      int currentRow; // row of current piece
+      int currentCol; // column of current piece
+
 
    private:
       // 3 vectors to store possible moves
@@ -24,8 +27,6 @@ class AI {
       vector<vector<Piece> > boardOriginal; 
       vector<vector<Piece> > boardCopy;  
       Piece currentPiece; // piece currently looking at moves for
-      int currentRow; // row of current piece
-      int currentCol; // column of current piece
 };
 
 #endif

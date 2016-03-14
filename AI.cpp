@@ -57,13 +57,13 @@ int AI::makeObviousMove() // returns 1 if move is made
 
          if(P.getChar() == 'q')
          {
-            if(P.getPlayer() == 1) // this is the AI queen
+            if(P.getPlayer() == 0) // this is the AI queen
             {
                AIQueenRow = row;
                AIQueenCol = col;
                cout << "Found AI queen in row " << AIQueenRow+1 << " and column " << AIQueenCol+1 << endl;
             }
-            else if(P.getPlayer() == 0) // this is the player Queen
+            else if(P.getPlayer() == 1) // this is the player Queen
             {
                PlayerQueenRow = row;
                PlayerQueenCol = col;
@@ -161,17 +161,18 @@ int AI::makeMove(int movesAhead)
 
 void AI::findNextPiece()
 {
-   currentRow = 0;
-   currentCol = 0; // get rid of these eventually
+   //currentRow = 0;
+   //currentCol = 0; // get rid of these eventually
 
    int row = currentRow;
    int col = currentCol;
-   col++;
+   //col++;
 
    while(col < 7)
    {
-
+      cout << "col: " << col << endl;
       int player = boardOriginal[row][col].getPlayer(); 
+      cout << "player: " << player << endl;
       if(player == 0 | player == 2)
          col++;
       else
@@ -179,9 +180,8 @@ void AI::findNextPiece()
 
       while(row < 7)
       {
-
+         cout << "row: " << row << endl;
          player = boardOriginal[row][col].getPlayer(); 
-         row++;
          if(player == 0 | player == 2)
             row++;
          else
@@ -190,6 +190,10 @@ void AI::findNextPiece()
       }
    }
 
+   currentRow = row;
+   currentCol = col;
+
+   cout << "Out of while loop" << endl;
    currentPiece = boardOriginal[row][col];
-   cout << "Next Piece: " << currentPiece.getChar();
+   cout << "Next Piece: " << currentPiece.getChar() << endl;
 }

@@ -3,7 +3,6 @@
 
 #include "board.h"
 
-
 class Manager{
 	public:
 		Manager();

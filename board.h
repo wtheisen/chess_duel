@@ -9,7 +9,6 @@
 //headers
 #include "pieces.h"
 #include "game.h"
-
 using namespace std;
 
 class Board{

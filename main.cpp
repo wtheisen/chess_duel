@@ -5,15 +5,17 @@
 #include "board.h"
 #include "game.h"
 #include "AI.h"
-
+#include "manager.h"
 using namespace std;
 
 int main(){
-	Board gameBoard; //instantiate board object	
+	Manager gameManager;	
+	/*Board gameBoard; //instantiate board object	
 	gameBoard.display();
 	gameBoard.writeToFile();
 	Game chessGame;
-        AI AI_1(gameBoard);
+	*/
+       // AI AI_1(gameBoard);
         //AI_1.findMoves(gameBoard);
         //AI_1.dispValidMoves();
         //AI_1.makeObviousMove();

@@ -6,10 +6,11 @@
 class Manager{
 	public:
 		Manager();
-		Board chessBoard;
+		void move( int, int, int, int );
+		Board board;
 		Game chessGame;
-	private:
-		
+	private:	
+	
 };
 
 #endif

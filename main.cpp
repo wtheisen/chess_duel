@@ -10,7 +10,7 @@ using namespace std;
 
 int main(){
 	Manager gameManager;
-	gameManager.chessBoard.display();	
+	gameManager.board.display();	
 	/*Board gameBoard; //instantiate board object	
 	gameBoard.display();
 	gameBoard.writeToFile();

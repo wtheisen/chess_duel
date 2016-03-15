@@ -4,7 +4,7 @@ Piece::Piece(){
 	
 }
 
-void Piece::move() const{
+void Piece::validMove() const{ //checks if move is valid
 	//virtual function, do not remove!
 }
 

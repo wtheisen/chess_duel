@@ -23,3 +23,6 @@
 
 3/10
    Danny - .7 hours continuing on AI code
+
+3/14
+	Alex - 2 Hours creating manager class, implementation

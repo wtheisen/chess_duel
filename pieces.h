@@ -7,11 +7,14 @@ class Piece{ //abstract base class for chess pieces
 		virtual void validMove() const;
 		void setChar( char);
 		void setPlayer( int);
+		void setValue( int);
 		char getChar();
 		int getPlayer();
+		int getValue();
 	private:
 		int player; //0 is caps, 1 is lower-case	
 		char repChar; //p for pawn, etc...
+		int value;
 };
 
 class Null: public Piece{

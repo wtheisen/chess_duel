@@ -38,6 +38,7 @@ void Manager::play(){
 		game.getCoordinates();
 		move( game.getFromX(), game.getFromY(), game.getToX(), game.getToY() );
 		board.display();
+		saveBoard();
 	}
 }
 
@@ -56,3 +57,22 @@ void Manager::saveBoard(){
 	}
 	gamestate.close();
 }
+
+
+
+void Manager::collectValues(){
+	player0Val = 0;
+	player1Val = 0;	
+	
+	for( int i = 0; i < 8; i++){
+		for( int j = 0; j < 8; j++){
+			if( board.chessBoard[j].at(i).getPlayer() == 0){
+				player0Val += board.chessBoard[j].at(i).getValue();		
+			}else if( board.chessBoard[j].at(i).getPlayer() == 1 ){
+				player1Val += board.chessBoard[j].at(i).getValue();
+			}
+		}
+	}	
+}
+
+

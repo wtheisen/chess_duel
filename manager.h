@@ -9,13 +9,14 @@ class Manager{
 		void move( int, int, int, int );
 		void play();
 		void saveBoard();
-		void loveBoard();	
+		void collectValues();	
 		//public data members
 		Board board;
 		Game game;
 	
 	private:	
-
+		int player0Val;
+		int player1Val;
 };
 
 #endif

@@ -8,10 +8,14 @@ class Manager{
 		Manager();
 		void move( int, int, int, int );
 		void play();
+		void saveBoard();
+		void loveBoard();	
+		//public data members
 		Board board;
 		Game game;
-	private:	
 	
+	private:	
+
 };
 
 #endif

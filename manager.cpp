@@ -40,3 +40,19 @@ void Manager::play(){
 		board.display();
 	}
 }
+
+void Manager::saveBoard(){
+	ofstream gamestate; 
+	gamestate.open("gamestate");
+	for( int i = 0; i < 8; i++){
+		for( int j = 0; j < 8; j++){
+			if( board.chessBoard[j].at(i).getPlayer() == 1){
+				gamestate << (char)(board.chessBoard[j].at(i).getChar() - 32);
+			}else{
+				gamestate << board.chessBoard[j].at(i).getChar();
+			}	
+		}
+		gamestate << "\n";
+	}
+	gamestate.close();
+}

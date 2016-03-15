@@ -7,8 +7,9 @@ class Manager{
 	public:
 		Manager();
 		void move( int, int, int, int );
+		void play();
 		Board board;
-		Game chessGame;
+		Game game;
 	private:	
 	
 };

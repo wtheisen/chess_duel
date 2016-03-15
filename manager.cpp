@@ -13,6 +13,30 @@ void Manager::move( int sourceX, int sourceY, int targetX, int targetY ){ //actu
 	}
 
 	if( captureStatus == 0){
-		
+		swap(  board.chessBoard[targetY].at(targetX), board.chessBoard[sourceY].at(sourceX));		
+	}
+
+	if( captureStatus == 1){
+		swap(  board.chessBoard[targetY].at(targetX), board.chessBoard[sourceY].at(sourceX));	
+		//get null piece from null board
+		for( int i = 0; i < 8; i++){
+			for( int j = 0; j < 8; j++){
+				if (board.nullBoard[j].at(i).getPlayer() == 2){
+					targetY = j;
+					targetX = i;
+					break;
+				}
+			}
+		}
+			swap(  board.nullBoard[targetY].at(targetX), board.chessBoard[sourceY].at(sourceX));	
 	}	
+	
+}
+
+void Manager::play(){
+	while( 1){
+		game.getCoordinates();
+		move( game.getFromX(), game.getFromY(), game.getToX(), game.getToY() );
+		board.display();
+	}
 }

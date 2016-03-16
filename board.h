@@ -9,7 +9,6 @@
 //headers
 #include "pieces.h"
 #include "game.h"
-
 using namespace std;
 
 class Board{
@@ -20,9 +19,11 @@ class Board{
 		void initPieces();
 		void display();
 		void writeToFile();
+		vector< vector < Piece> > nullBoard;	
+		vector< vector < Piece> > chessBoard;
+	
 	private:
 		int dim;
-		vector< vector < Piece> > chessBoard; 
 };
 
 #endif

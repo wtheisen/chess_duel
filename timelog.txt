@@ -26,3 +26,4 @@
 
 3/14
    Everyone - .75 hours working in lab
+   Alex - 2 Hours creating manager class, implementation

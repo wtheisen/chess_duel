@@ -3,7 +3,6 @@
 Board::Board(){	
 	dim = 8;
 	initPieces();
-	//chessBoard[1].push_back( Pawn )	
 }
 
 void Board::initPieces(){
@@ -77,7 +76,70 @@ void Board::initPieces(){
 	chessBoard.push_back( tempVector);
 	tempVector.clear();
 	
+	Null Null33(2), Null34(2), Null35(2), Null36(2), Null37(2), Null38(2), Null39(2), Null40(2);
+	Null Null41(2), Null42(2), Null43(2), Null44(2), Null45(2), Null46(2), Null47(2), Null48(2);
+	Null Null49(2), Null50(2), Null51(2), Null52(2), Null53(2), Null54(2), Null55(2), Null56(2); 
+	Null Null57(2), Null58(2), Null59(2), Null60(2), Null61(2), Null62(2), Null63(2), Null64(2);	
+	Null Null65(2), Null66(2), Null67(2), Null68(2), Null69(2), Null70(2), Null71(2), Null72(2);
+	Null Null73(2), Null74(2), Null75(2), Null76(2), Null77(2), Null78(2), Null79(2), Null80(2);
+	Null Null81(2), Null82(2), Null83(2), Null84(2), Null85(2), Null86(2), Null87(2), Null88(2); 
+	Null Null89(2), Null90(2), Null91(2), Null92(2), Null93(2), Null94(2), Null95(2), Null96(2);	
 
+	tempVector.push_back(Null33); tempVector.push_back(Null34);
+	tempVector.push_back(Null35); tempVector.push_back(Null36); 
+	tempVector.push_back(Null37); tempVector.push_back(Null38);
+	tempVector.push_back(Null39); tempVector.push_back(Null40);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+
+	tempVector.push_back(Null41); tempVector.push_back(Null42);
+	tempVector.push_back(Null43); tempVector.push_back(Null44); 
+	tempVector.push_back(Null45); tempVector.push_back(Null46);
+	tempVector.push_back(Null47); tempVector.push_back(Null48);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+
+	tempVector.push_back(Null49); tempVector.push_back(Null50);
+	tempVector.push_back(Null51); tempVector.push_back(Null52); 
+	tempVector.push_back(Null53); tempVector.push_back(Null54);
+	tempVector.push_back(Null55); tempVector.push_back(Null56);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+	
+	tempVector.push_back(Null57); tempVector.push_back(Null58);
+	tempVector.push_back(Null59); tempVector.push_back(Null60); 
+	tempVector.push_back(Null61); tempVector.push_back(Null62);
+	tempVector.push_back(Null63); tempVector.push_back(Null64);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+
+	tempVector.push_back(Null65); tempVector.push_back(Null66);
+	tempVector.push_back(Null67); tempVector.push_back(Null68); 
+	tempVector.push_back(Null69); tempVector.push_back(Null70);
+	tempVector.push_back(Null71); tempVector.push_back(Null72);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+	
+	tempVector.push_back(Null73); tempVector.push_back(Null74);
+	tempVector.push_back(Null75); tempVector.push_back(Null76); 
+	tempVector.push_back(Null77); tempVector.push_back(Null78);
+	tempVector.push_back(Null79); tempVector.push_back(Null80);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+
+	tempVector.push_back(Null81); tempVector.push_back(Null82);
+	tempVector.push_back(Null83); tempVector.push_back(Null84); 
+	tempVector.push_back(Null85); tempVector.push_back(Null86);
+	tempVector.push_back(Null87); tempVector.push_back(Null88);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
+	
+	tempVector.push_back(Null89); tempVector.push_back(Null90);
+	tempVector.push_back(Null91); tempVector.push_back(Null92); 
+	tempVector.push_back(Null93); tempVector.push_back(Null94);
+	tempVector.push_back(Null95); tempVector.push_back(Null96);
+	nullBoard.push_back( tempVector);
+	tempVector.clear();
 }
 
 
@@ -102,18 +164,3 @@ void Board::display(){
 	cout << endl << endl;
 }
 
-void Board::writeToFile(){
-	ofstream gamestate; 
-	gamestate.open("gamestate");
-	for( int i = 0; i < dim; i++){
-		for( int j = 0; j < dim; j++){
-			if( chessBoard[j].at(i).getPlayer() == 1){
-				gamestate << (char)(chessBoard[j].at(i).getChar() - 32);
-			}else{
-				gamestate << chessBoard[j].at(i).getChar();
-			}	
-		}
-		gamestate << "\n";
-	}
-	gamestate.close();
-}

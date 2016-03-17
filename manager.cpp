@@ -34,6 +34,7 @@ void Manager::move( int sourceX, int sourceY, int targetX, int targetY ){ //actu
 }
 
 void Manager::play(){
+	loadBoard();
 	while( 1){
 		game.getCoordinates();
 		move( game.getFromX(), game.getFromY(), game.getToX(), game.getToY() );
@@ -58,7 +59,28 @@ void Manager::saveBoard(){
 	gamestate.close();
 }
 
-
+void Manager::loadBoard(){
+	ifstream gamefile; 
+	string filename;
+	cout << "Please enter the name of file to load from: ";
+	cin >> filename;
+	gamefile.open(filename.c_str());
+	//read char from file into 2d array
+	char boardArr[8][8];
+	string currentString;
+	string fileContents;
+	while (getline( gamefile, currentString)){
+		fileContents += currentString;
+		fileContents.push_back('\n');	
+	}
+	int count = 0;
+	for( int i = 0; i < 8; i++){
+		for( int j = 0; j < 8; j++){
+			boardArr[i][j] = fileContents[count];
+			count++;	
+		}
+	}
+}
 
 void Manager::collectValues(){
 	player0Val = 0;

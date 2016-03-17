@@ -22,7 +22,7 @@ int main(){
         //AI_1.dispValidMoves();
         //AI_1.makeObviousMove();
         //AI_1.makeMove(1);
-        AI_1.currentRow = 0;
+        /*AI_1.currentRow = 0;
         AI_1.currentCol = 0;
         AI_1.findNextPiece();
         cout << "current Row: " << AI_1.currentRow << endl;
@@ -37,9 +37,7 @@ int main(){
         AI_1.findNextPiece();
         AI_1.findNextPiece();
         AI_1.findNextPiece();
-       
- 
-
+		*/
 
 	return 0;
 }

@@ -9,6 +9,7 @@ class Manager{
 		void move( int, int, int, int );
 		void play();
 		void saveBoard();
+		void loadBoard();
 		void collectValues();	
 		//public data members
 		Board board;

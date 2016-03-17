@@ -71,7 +71,6 @@ void Manager::loadBoard(){
 	string fileContents;
 	while (getline( gamefile, currentString)){
 		fileContents += currentString;
-		fileContents.push_back('\n');	
 	}
 	int count = 0;
 	for( int i = 0; i < 8; i++){
@@ -80,6 +79,9 @@ void Manager::loadBoard(){
 			count++;	
 		}
 	}
+	//boardArr now holds the chars from file
+	//now transform board to match boardArr
+	
 }
 
 void Manager::collectValues(){

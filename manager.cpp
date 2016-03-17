@@ -36,9 +36,9 @@ void Manager::move( int sourceX, int sourceY, int targetX, int targetY ){ //actu
 void Manager::play(){
 	loadBoard();
 	while( 1){
+		board.display();
 		game.getCoordinates();
 		move( game.getFromX(), game.getFromY(), game.getToX(), game.getToY() );
-		board.display();
 		saveBoard();
 	}
 }
@@ -48,11 +48,7 @@ void Manager::saveBoard(){
 	gamestate.open("gamestate");
 	for( int i = 0; i < 8; i++){
 		for( int j = 0; j < 8; j++){
-			if( board.chessBoard[j].at(i).getPlayer() == 1){
-				gamestate << (char)(board.chessBoard[j].at(i).getChar() - 32);
-			}else{
-				gamestate << board.chessBoard[j].at(i).getChar();
-			}	
+			gamestate << board.chessBoard[j].at(i).getChar();	
 		}
 		gamestate << "\n";
 	}
@@ -81,7 +77,24 @@ void Manager::loadBoard(){
 	}
 	//boardArr now holds the chars from file
 	//now transform board to match boardArr
-	
+	for( int i = 0; i < 8; i++){
+		for( int j = 0; j < 8; j++){
+			char targetChar = boardArr[i][j]; 
+			//find an appropriatte piece from the board
+			int found = 0;
+			for( int a = 0; a < 8; a++){
+				for( int b = 0; b < 8; b++){
+					if (board.chessBoard[b].at(a).getChar() == targetChar){
+						move(  i, j, a, b);
+						found = 1;
+						break;		
+					}
+					if (found)
+						break;
+				}
+			}
+		}
+	}	
 }
 
 void Manager::collectValues(){

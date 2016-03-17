@@ -10,7 +10,6 @@ using namespace std;
 
 int main(){
 	Manager gameManager; //instantiates game, board, etc. 
-	gameManager.board.display();	
 	gameManager.play();
 	/*Board gameBoard; //instantiate board object	
 	gameBoard.display();

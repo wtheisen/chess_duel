@@ -33,44 +33,44 @@ int Piece::getValue(){
 }
 
 Null::Null(int num){
-	setChar(32);
 	setPlayer(num);
+	setChar(32);
 	setValue(0);
 }
 
 Pawn::Pawn(int num){
-	setChar('p');
 	setPlayer(num);
+	setChar('p' - num * 32);
 	setValue( 1);
 }
 
 Knight::Knight(int num){
-	setChar('n');
 	setPlayer(num);
+	setChar('n' - num * 32);
 	setValue( 3);
 }
 
 Castle::Castle(int num){
-	setChar('c');
 	setPlayer(num);
+	setChar('c' - num * 32);
 	setValue( 5);
 }
 
 Bishop::Bishop(int num){
-	setChar('b');
 	setPlayer(num);
+	setChar('b' - num * 32);
 	setValue( 3);
 }
 
 King::King(int num){
-	setChar('k');
 	setPlayer(num);
+	setChar('k' - num * 32);
 	setValue( 4);
 }
 
 Queen::Queen(int num){
-	setChar('q');
 	setPlayer(num);
+	setChar('q' - num * 32);
 	setValue( 9);
 }
 

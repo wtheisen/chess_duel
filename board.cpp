@@ -150,13 +150,7 @@ void Board::display(){
 		cout << 8 - i << "  ";
 		for( int j = 0; j < dim; j++){
 			cout << "|";
-			if( chessBoard[j].at(i).getPlayer() == 0){
-				cout << chessBoard[j].at(i).getChar();
-			}else if( chessBoard[j].at(i).getPlayer() == 1){
-				cout << (char)(chessBoard[j].at(i).getChar()-32);
-			}else{
-				cout << chessBoard[j].at(i).getChar();
-			}
+			cout << chessBoard[j].at(i).getChar();	
 			cout << "|";
 		}
 		cout << endl;

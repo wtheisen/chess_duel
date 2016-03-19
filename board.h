@@ -9,6 +9,8 @@
 //headers
 #include "pieces.h"
 #include "game.h"
+#include "Move.h"
+
 using namespace std;
 
 class Board{

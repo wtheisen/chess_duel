@@ -121,9 +121,7 @@ void AI::findMoves(Board B)
                   {
                      //if(isValidMove(chessBoard[row][col], r, c)
                      //{
-                         Pieces.push_back(B.chessBoard[row][col]);
-                         moveRows.push_back(r);
-                         moveCols.push_back(c);
+                            moves.push_back(Move()); 
                      //}
                   }
                }
@@ -135,18 +133,8 @@ void AI::findMoves(Board B)
 
 void AI::dispValidMoves()
 {
-   cout << "Pieces" << endl;
-   for(int i=0; i<Pieces.size(); i++)
-      cout << Pieces[i].getChar() << " ";
-
-   cout << "Rows" << endl;
-   for(int j=0; j<moveRows.size(); j++)
-      cout << moveRows[j] << " " ;
-
-   cout << "Columns" << endl;
-   for(int k=0; k<moveCols.size(); k++)
-      cout << moveCols[k] << " ";
-
+    for(int i=0; i<moves.size(); i++)
+        moves[i].display();
 }
 
 int AI::makeMove(int movesAhead)
@@ -159,7 +147,7 @@ int AI::makeMove(int movesAhead)
    makeMove(movesAhead+1);
 }
 
-void AI::findNextPiece()
+/*void AI::findNextPiece()
 {
    //currentRow = 0;
    //currentCol = 0; // get rid of these eventually
@@ -196,4 +184,4 @@ void AI::findNextPiece()
    cout << "Out of while loop" << endl;
    currentPiece = boardOriginal[row][col];
    cout << "Next Piece: " << currentPiece.getChar() << endl;
-}
+}*/

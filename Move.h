@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "chess.crap"
+#include "pieces.h"
 
 #ifndef Move_H
 #define Move_H
@@ -18,4 +18,6 @@ class Move
 		int endRow;
 		int endCol;
 		double value;	
-}
+};
+
+#endif

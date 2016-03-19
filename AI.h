@@ -21,9 +21,10 @@ class AI {
 
    private:
       // 3 vectors to store possible moves
-      vector<Piece> Pieces; // piece that can make the move
-      vector<int> moveRows; // destination row
-      vector<int> moveCols; // destination column
+      //vector<Piece> Pieces; // piece that can make the move
+      //vector<int> moveRows; // destination row
+      //vector<int> moveCols; // destination column
+      vector<Move> moves;
       vector<vector<Piece> > boardOriginal; 
       vector<vector<Piece> > boardCopy;  
       Piece currentPiece; // piece currently looking at moves for

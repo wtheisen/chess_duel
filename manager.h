@@ -2,6 +2,8 @@
 #define _MANAGER_H_INCLUDED_
 
 #include "board.h"
+#include "AI.h"
+//#include "game.h"
 
 class Manager{
 	public:
@@ -14,6 +16,7 @@ class Manager{
 		//public data members
 		Board board;
 		Game game;
+                AI AI_1(Board);
 	
 	private:	
 		int player0Val;
@@ -21,4 +24,3 @@ class Manager{
 };
 
 #endif
-

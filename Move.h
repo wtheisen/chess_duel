@@ -1,8 +1,8 @@
-#include <iostream>
-#include "pieces.h"
-
 #ifndef Move_H
 #define Move_H
+
+#include <iostream>
+#include "pieces.h"
 
 class Move
 {
@@ -10,6 +10,7 @@ class Move
 		Move();
 	
 		Move(Piece piece, int startRow, int startCol, int endRow, int endCol);
+                void Display();
 	
 	private: 
 		Piece piece;

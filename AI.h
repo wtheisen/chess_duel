@@ -7,7 +7,7 @@ using namespace std;
 
 class AI {
    public:
-      AI(Board B);
+      AI(Board);
       void overallAlgorithm(); // skeleton
       void findMoves(Board B); // find valid moves
       void dispValidMoves();

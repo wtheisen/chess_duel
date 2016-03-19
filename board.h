@@ -10,12 +10,13 @@
 #include "pieces.h"
 #include "game.h"
 #include "Move.h"
+//#include "AI.h"
 
 using namespace std;
 
 class Board{
 
-        friend class AI;
+        //friend class AI;
 	public:
 		Board(); //default constructor for board
 		void initPieces();

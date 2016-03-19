@@ -1,4 +1,5 @@
 #include "AI.h"
+#include "Move.h"
 #include <iostream>
 
 using namespace std;
@@ -121,7 +122,8 @@ void AI::findMoves(Board B)
                   {
                      //if(isValidMove(chessBoard[row][col], r, c)
                      //{
-                            moves.push_back(Move()); 
+                            Move testMove(B.chessBoard[row][col], row, col, r, c);
+                            moves.push_back(testMove); 
                      //}
                   }
                }
@@ -134,7 +136,7 @@ void AI::findMoves(Board B)
 void AI::dispValidMoves()
 {
     for(int i=0; i<moves.size(); i++)
-        moves[i].display();
+        moves[i].Display();
 }
 
 int AI::makeMove(int movesAhead)

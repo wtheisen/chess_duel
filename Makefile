@@ -1,7 +1,7 @@
 all: 	main
 
 main: main.o board.o game.o manager.o pieces.o AI.o Move.o
-		g++ main.o board.o game.o manager.o pieces.o AI.o -o main
+		g++ main.o board.o game.o manager.o pieces.o AI.o Move.o -o main
 
 main.o: main.cpp
 		g++ -c main.cpp

@@ -13,7 +13,7 @@ Move::Move(Piece pieceIn, int sRow, int sCol, int eRow, int eCol)
 	value = 0;
 }
 
-Move::Display()
+void Move::Display()
 {
 	cout << "The starting row and column are: " << startRow << "x" << startCol << endl;
 	cout << "The ending row and column are: " << endRow << "x" << endCol << endl;

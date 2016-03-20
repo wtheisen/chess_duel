@@ -27,3 +27,6 @@
 3/14
    Everyone - .75 hours working in lab
    Alex - 2 Hours creating manager class, implementation
+
+3/18 
+	Alex - 1.5 hours working on savestates

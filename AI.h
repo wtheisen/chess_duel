@@ -27,7 +27,7 @@ class AI {
       vector<Move> moves;
       vector<vector<Piece> > boardOriginal; 
       vector<vector<Piece> > boardCopy;  
-      Piece currentPiece; // piece currently looking at moves for
+      //Piece currentPiece; // piece currently looking at moves for
 };
 
 #endif

@@ -16,7 +16,7 @@ class Manager{
 		//public data members
 		Board board;
 		Game game;
-                AI AI_1(Board);
+                //AI AI_1(Board);
 	
 	private:	
 		int player0Val;

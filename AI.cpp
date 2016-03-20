@@ -135,27 +135,34 @@ void AI::findMoves(Board B)
 
 void AI::dispValidMoves()
 {
+    cout << "number of moves: " << moves.size() << endl;
     for(int i=0; i<moves.size(); i++)
         moves[i].Display();
 }
 
 int AI::makeMove(int movesAhead)
 {
-   if(movesAhead > 4)
-      return 0; 
+    //if(movesAhead > 4)
+    //return 0; 
+    
+    for(int i=0; i<moves.size(); i++)
+    {
+        //attack = (gains + opponent's loss - loss - opponent’s gain) + ((1/turns ahead) * (gains - losses) <- account for probability decay - from recursive return)
+    }
 
-   cout << "moves ahead: " << movesAhead << endl;
 
-   makeMove(movesAhead+1);
+    //cout << "moves ahead: " << movesAhead << endl;
+
+    //makeMove(movesAhead+1);
 }
 
 /*void AI::findNextPiece()
-{
-   //currentRow = 0;
-   //currentCol = 0; // get rid of these eventually
+  {
+//currentRow = 0;
+//currentCol = 0; // get rid of these eventually
 
-   int row = currentRow;
-   int col = currentCol;
+int row = currentRow;
+int col = currentCol;
    //col++;
 
    while(col < 7)

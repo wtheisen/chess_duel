@@ -27,3 +27,9 @@
 3/14
    Everyone - .75 hours working in lab
    Alex - 2 Hours creating manager class, implementation
+
+3/19
+    Danny and Billy - 1.5 hours working on Move class integration and overall structure
+
+3/20
+    Everyone - .75 hours meeting to get synced up

@@ -36,13 +36,17 @@ void Manager::move( int sourceX, int sourceY, int targetX, int targetY ){ //actu
 }
 
 void Manager::play(){
-	loadBoard();
-	while( 1){
+	//loadBoard();
+	//while( 1){
 		board.display();
 		game.getCoordinates();
 		move( game.getFromX(), game.getFromY(), game.getToX(), game.getToY() );
 		saveBoard();
-	}
+	//}
+
+        AI AI_1(board);
+        AI_1.findMoves(board);
+        AI_1.dispValidMoves();
 }
 
 void Manager::saveBoard(){

@@ -30,10 +30,12 @@
 
 3/18 
 	Alex - 1.5 hours working on savestates
+        Michael - 2.5 hours validMove()
 
 3/19
     Danny and Billy - 1.5 hours working on Move class integration and overall structure
+    Michael - .5 move()
 
 3/20
     Everyone - .75 hours meeting to get synced up
-
+    Michael - 3 hours validMove() per class 

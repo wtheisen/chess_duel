@@ -74,60 +74,60 @@ Queen::Queen(int num){
 	setValue( 9);
 }
 
-int Pawn::ValidMove(int sCol, int sRow, int mCol, int mRow) {
+int Pawn::validMove(int sCol, int sRow, int mCol, int mRow) {
     
-    if (chessBoard[sCol].at(Srow).getPlayer() == 2) {
-        cout << "Selected vacant location " << endl;
+    if (chessBoard[sCol].at(sRow).getPlayer() == 2) {
+        cout << "Selected location is vacant " << endl;
         return 2;
     }
     return 0;
     
 }
 
-int Knight::ValidMove(int sCol, int sRow, int mCol, int mRow) {
+int Knight::validMove(int sCol, int sRow, int mCol, int mRow) {
     
-    if (chessBoard[sCol].at(Srow).getPlayer() == 2) {
-        cout << "Selected vacant location " << endl;
+    if (chessBoard[sCol].at(sRow).getPlayer() == 2) {
+        cout << "Selected location is vacant " << endl;
         return 2;
     }
     return 0;
     
 }
 
-int Castle::ValidMove(int sCol, int sRow, int mCol, int mRow) {
+int Castle::validMove(int sCol, int sRow, int mCol, int mRow) {
     
-    if (chessBoard[sCol].at(Srow).getPlayer() == 2) {
-        cout << "Selected vacant location " << endl;
+    if (chessBoard[sCol].at(sRow).getPlayer() == 2) {
+        cout << "Selected location is vacant " << endl;
         return 2;
     }
     return 0;
     
 }
 
-int Bishop::ValidMove(int sCol, int sRow, int mCol, int mRow) {
+int Bishop::validMove(int sCol, int sRow, int mCol, int mRow) {
     
-    if (chessBoard[sCol].at(Srow).getPlayer() == 2) {
-        cout << "Selected vacant location " << endl;
+    if (chessBoard[sCol].at(sRow).getPlayer() == 2) {
+        cout << "Selected location is vacant " << endl;
         return 2;
     }
     return 0;
     
 }
 
-int King::ValidMove(int sCol, int sRow, int mCol, int mRow) {
+int King::validMove(int sCol, int sRow, int mCol, int mRow) {
     
-    if (chessBoard[sCol].at(Srow).getPlayer() == 2) {
-        cout << "Selected vacant location " << endl;
+    if (chessBoard[sCol].at(sRow).getPlayer() == 2) {
+        cout << "Selected location is vacant " << endl;
         return 2;
     }
     return 0;
     
 }
 
-int Queen::ValidMove(int sCol, int sRow, int mCol, int mRow) {
+int Queen::validMove(int sCol, int sRow, int mCol, int mRow) {
     
-    if (chessBoard[sCol].at(Srow).getPlayer() == 2) {
-        cout << "Selected vacant location " << endl;
+    if (chessBoard[sCol].at(sRow).getPlayer() == 2) {
+        cout << "Selected  location is vacant " << endl;
         return 2;
     }
     return 0;

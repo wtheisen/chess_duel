@@ -30,6 +30,7 @@ class Pawn: public Piece{
 		Pawn( int );
 		int validMove(int, int, int, int);
 	private:
+        
 
 };
 
